@@ -19,6 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+		"style/iugo.material.scss",
         "styles.scss"
       ],
       "scripts": [],

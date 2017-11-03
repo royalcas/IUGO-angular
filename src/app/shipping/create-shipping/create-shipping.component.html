@@ -1,0 +1,61 @@
+<h1 class="page-title">Nueva solicitud de carga</h1>
+<p class="page-description">Test page description</p>
+
+<mat-card>
+	<mat-card-header>
+
+	</mat-card-header>
+	<mat-card-content>
+		<form action="">
+			<mat-form-field class="mat-full-width">
+				<input matInput placeholder="Name">
+			</mat-form-field>
+			<br>
+
+			<div class="origin-destination-container" fxLayout="row" fxLayout.xs="column">
+				<div class="origin-information" fxFlex="50%" fxFlex.xs="100%">
+					<h4>Información Origen</h4>
+					<mat-form-field>
+						<mat-select placeholder="Origen">
+							<mat-option *ngFor="let location of locations" [value]="location" [disabled]="location === form.destinationId">
+								{{ location }}
+							</mat-option>
+						</mat-select>
+					</mat-form-field>
+					<br>
+					<mat-form-field >
+						<input matInput [matDatepicker]="picker" placeholder="Fecha de recogida">
+						<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+						<mat-datepicker #picker></mat-datepicker>
+					</mat-form-field>
+				</div>
+				<div class="destination-information"  fxFlex="50%" fxFlex.xs="100%">
+					<h4>Información Destino</h4>
+					<mat-form-field>
+						<mat-select placeholder="Destino">
+							<mat-option *ngFor="let location of locations" [value]="location" [disabled]="location === form.originId">
+								{{ location }}
+							</mat-option>
+						</mat-select>
+					</mat-form-field>
+					<br>
+
+					<mat-form-field>
+						<input matInput [matDatepicker]="picker2" placeholder="Fecha de entrega">
+						<mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+						<mat-datepicker #picker2></mat-datepicker>
+					</mat-form-field>
+				</div>
+			</div>
+			<br>
+			<mat-form-field class="mat-full-width">
+				<textarea matInput placeholder="Comentarios"></textarea>
+			</mat-form-field>
+			<br>
+
+			<button mat-raised-button color="accent">Crear</button>
+			<button mat-raised-button color="primary">Crear y Asignar Conductor</button>
+			<button mat-raised-button>Cancelar</button>
+		</form>
+	</mat-card-content>
+</mat-card>

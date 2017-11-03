@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+	font-family: 'Open Sans', sans-serif;
+	padding: 0px;
+	margin: 0px;
+	background: #424242;
+
+	main{
+		padding: 0px 20px;
+		min-height: 100vh;
+	}
+}
+
+* {
+	line-height: 1.1;
+}
+
+h1, h2, h3, h4, h5{
+	font-family: 'Roboto', sans-serif;
+}
+
+h1.page-title{
+	color: #eee;
+	font-weight: normal;
+	margin-top: 20px;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 8px;
+	font-size: 16px;
+	
+}
+
+p.page-description{
+	color: #eee;
+	font-size: 12px;
+}
+
+header{
+	margin-top: 100px;
+	margin-bottom: 30px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+}
